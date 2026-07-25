@@ -75,4 +75,21 @@ document.addEventListener("DOMContentLoaded", () => {
             commentsList.appendChild(card); // Mantém a ordem salva se estiver carregando do LocalStorage
         }
     }
+    // Adicione este trecho dentro de document.addEventListener("DOMContentLoaded", () => { ... })
+
+const music = document.getElementById("bgMusic");
+const modal = document.getElementById("musicModal");
+const btnPlay = document.getElementById("btnPlayMusic");
+const btnNo = document.getElementById("btnNoMusic");
+
+// Quando clicar em "Sim"
+btnPlay.addEventListener("click", () => {
+    music.play().catch(error => console.log("Erro ao tocar áudio:", error));
+    modal.style.display = "none"; // Esconde o pop-up
+});
+
+// Quando clicar em "Não"
+btnNo.addEventListener("click", () => {
+    modal.style.display = "none"; // Apenas esconde o pop-up
+});
 });
