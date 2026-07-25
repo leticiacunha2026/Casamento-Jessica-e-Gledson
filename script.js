@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const attendance = document.getElementById("attendance").value;
     const message = document.getElementById("guestMessage").value;
 
-    const numeroNoiva = "5511981005189";
+    const numeroNoiva = "5519997432202";
 
     // Texto da mensagem
     const texto = `*Nova Confirmação de Presença!* 💒\n\n` +
