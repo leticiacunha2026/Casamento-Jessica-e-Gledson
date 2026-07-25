@@ -18,26 +18,37 @@ document.addEventListener("DOMContentLoaded", () => {
     loadComments();
 
     form.addEventListener("submit", (e) => {
-        e.preventDefault();
+    e.preventDefault();
 
-        const name = document.getElementById("guestName").value;
-        const attendance = document.getElementById("attendance").value;
-        const message = document.getElementById("guestMessage").value;
+    const name = document.getElementById("guestName").value;
+    const attendance = document.getElementById("attendance").value;
+    const message = document.getElementById("guestMessage").value;
 
-        const commentData = {
-            name,
-            attendance,
-            message: message.trim() ? message : "Apenas confirmou presença sem recado.",
-            date: new Date().toLocaleDateString('pt-BR')
-        };
+    const numeroNoiva = "5519997432202";
 
-        saveComment(commentData);
-        addCommentToDOM(commentData, true); // true indica que é um novo comentário (vai no topo)
+    // Texto da mensagem
+    const texto = `*Nova Confirmação de Presença!* 💒\n\n` +
+                  `*Nome:* ${name}\n` +
+                  `*Presença:* ${attendance}\n` +
+                  `*Recado:* ${message || "Sem recado."}`;
 
-        // Limpar formulário
-        form.reset();
-        alert("Obrigado pela confirmação, " + name + "!");
-    });
+    // Link para abrir o WhatsApp
+    const url = `https://wa.me/${numeroNoiva}?text=${encodeURIComponent(texto)}`;
+
+    // Salva localmente no mural do site também
+    const commentData = {
+        name,
+        attendance,
+        message: message || "Apenas confirmou presença sem recado.",
+        date: new Date().toLocaleDateString('pt-BR')
+    };
+    saveComment(commentData);
+    addCommentToDOM(commentData, true);
+
+    // Limpa o formulário e abre o WhatsApp
+    form.reset();
+    window.open(url, '_blank');
+});
 
     function saveComment(data) {
         let comments = JSON.parse(localStorage.getItem("wedding_comments")) || [];
