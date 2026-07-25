@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f9f6f0;
+    color: #4a4a4a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.wedding-container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 600px;
+    border: 1px solid #efe8e1;
+}
+
+h2 {
+    text-align: center;
+    color: #7d6a5c;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: #8c8c8c;
+    margin-bottom: 25px;
+}
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    color: #9a734c;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #8a4b0c;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #6e6961;
+    background-color: #fcfbfa;
+    transition: border-color 0.3s;
+}
+
+textarea {
+    resize: none;
+}
+input:focus, 
+select:focus, 
+textarea:focus {
+    outline: none;
+    border-color: #ad8318;
+    background-color: #fff;
+}
+.btn-submit {
+    width: 100%;
+    background-color: #9c8471;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #826c5b;
+}
+
+.comments-section {
+    margin-top: 35px;
+    border-top: 1px solid #efe8e1;
+    padding-top: 20px;
+}
+
+.comments-section h3 {
+    font-size: 16px;
+    color: #7d6b5d;
+    margin-bottom: 15px;
+}
+
+#commentsList {
+    max-height: 250px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+.comment-card {
+    background: #fdfbf7;
+    border-left: 4px solid #9c8471;
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 4px;
+}
+
+.comment-status {
+    font-weight: normal;
+    font-size: 11px;
+    color: #7a8b79;
+}
+
+.comment-body {
+    font-size: 13px;
+    color: #666;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação de Presença - Casamento J&G</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="wedding-container">
+        <h2>Confirmação de Presença & Mural de Recados</h2>
+        <p class="subtitle">Sua presença é essencial para nós! Por favor, confirme abaixo e deixe uma mensagem para os noivos.</p>
+
+        <!-- Formulário -->
+        <form id="rsvpForm">
+            <div class="input-group">
+                <label for="guestName">Seu Nome Completo</label>
+                <input type="text" id="guestName" required placeholder="Ex: Maria Silva">
+            </div>
+
+            <div class="input-group">
+                <label for="attendance">Você irá comparecer?</label>
+                <select id="attendance" required>
+                    <option value="" disabled selected>Selecione uma opção</option>
+                    <option value="Sim, com certeza!">Sim, com certeza! 🎉</option>
+                    <option value="Infelizmente não poderei comparecer">Infelizmente não poderei comparecer 😢</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="guestMessage">Deixe um recado para os noivos</label>
+                <textarea id="guestMessage" rows="3" placeholder="Escreva sua mensagem carinhosa aqui..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Enviar Confirmação</button>
+        </form>
+
+        <!-- Seção de Comentários / Lista de Confirmações -->
+        <div class="comments-section">
+            <h3>Mural de Mensagens dos Convidados</h3>
+            <div id="commentsList">
+                <!-- Os comentários aparecem aqui dinamicamente -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
